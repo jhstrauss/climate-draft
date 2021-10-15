@@ -6,12 +6,14 @@ function removeWhiteSpace(){
 	  }
   	};	
 	forEach(document.querySelectorAll('.sw-js-list-empty-state'), function(index, node){
-	if (node.textContent !== ''){
+	if (node.textContent !== '' && ){
 		return;
 	}
 	console.log('hide it!');
 	node.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
 	})	
 }
+debugger;
 setTimeout(removeWhiteSpace, 200);
 console.log('helloooo');
+
