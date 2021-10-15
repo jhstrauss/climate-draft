@@ -1,5 +1,3 @@
-
-
 function removeWhiteSpace(){
 	// https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
 	var forEach = function (array, callback, scope) {
@@ -7,11 +5,13 @@ function removeWhiteSpace(){
 	    callback.call(scope, i, array[i]); // passes back stuff we need
 	  }
   	};	
-	forEach(document.querySelectorAll(‘.sw-js-list-empty-state’), function(index, node){
-	if (node.textContent !== ‘’){
+	forEach(document.querySelectorAll('.sw-js-list-empty-state'), function(index, node){
+	if (node.textContent !== ''){
 		return;
 	}
-	node.parentElement.parentElement.parentElement.parentElement.style.display = ‘none’;
+	console.log('hide it!');
+	node.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
 	})	
 }
 setTimeout(removeWhiteSpace, 200);
+console.log('helloooo');
